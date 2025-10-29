@@ -45,6 +45,43 @@ All colors MUST be HSL.
     /* Shadow colors */
     --shadow-color: 244 55% 58%;
   }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 244 55% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 244 55% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 244 55% 58%;
+
+    /* Custom gradient colors */
+    --gradient-from: 244 55% 58%;
+    --gradient-to: 266 60% 65%;
+    
+    /* Shadow colors */
+    --shadow-color: 244 55% 58%;
+  }
 }
 
 @layer base {
