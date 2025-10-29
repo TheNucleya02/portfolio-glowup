@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import profileImg from "@/assets/profile.jpeg";
 
 export const About = () => {
   const skills = [
@@ -59,8 +60,12 @@ export const About = () => {
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full opacity-20 blur-2xl" />
-              <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-accent/20 backdrop-blur-sm border-4 border-primary/30 flex items-center justify-center overflow-hidden">
-                <div className="text-8xl font-bold text-primary/30">AJ</div>
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl">
+                <img
+                  src={profileImg}
+                  alt="Aman Jha"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

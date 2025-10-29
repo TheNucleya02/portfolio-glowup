@@ -2,6 +2,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import workoutImg from "@/assets/workout.jpg";
+import docImg from "@/assets/doc.jpg";
+import cryptoImg from "@/assets/crypto.jpg";
 
 export const Projects = () => {
   const projects = [
@@ -12,6 +15,7 @@ export const Projects = () => {
       tech: ["LangGraph", "FastAPI", "SQLite", "Docker"],
       github: "https://github.com/TheNucleya02/AI-Workout-application.git",
       demo: "#",
+      image: workoutImg,
     },
     {
       title: "Document Intelligence System",
@@ -20,6 +24,7 @@ export const Projects = () => {
       tech: ["Streamlit", "FastAPI", "Python", "ChromaDB"],
       github: "https://github.com/TheNucleya02/Document-intelligence-system.git",
       demo: "#",
+      image: docImg,
     },
     {
       title: "AI Chat Assistant",
@@ -28,6 +33,7 @@ export const Projects = () => {
       tech: ["Python", "CrewAI", "FastAPI", "CoinDX API"],
       github: "https://github.com/TheNucleya02/crypto_assistant_backend.git",
       demo: "#",
+      image: cryptoImg,
     },
   ];
 
@@ -47,8 +53,15 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/50"
+              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/50 overflow-hidden"
             >
+              <div className="relative h-48 overflow-hidden bg-secondary">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
               <CardHeader>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
                   {project.title}
