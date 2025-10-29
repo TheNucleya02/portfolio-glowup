@@ -4,21 +4,21 @@ export const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: "Python, JavaScript/TypeScript, C++, Java, Golang",
+      skills: "Python, C++, C, HTML, CSS, JS",
     },
     {
       title: "Libraries & Frameworks",
       skills:
-        "TensorFlow, PyTorch, Scikit-Learn, React.js, Next.js, Node.js, Express.js, Flask, Django",
+        "Scikit-Learn, PyTorch, Flask, FastAPI, LangChain, LangGraph",
     },
     {
       title: "Tools & Platforms",
-      skills: "Git, Docker, Kubernetes, AWS, GCP, Supabase, Salesforce",
+      skills: "Git, Docker, AWS, MCP, Hugging Face, Kaggle",
     },
     {
       title: "Data & Analytics",
       skills:
-        "NumPy, Pandas, Matplotlib, Seaborn, PostgreSQL, MongoDB, GeoPandas, Rasterio",
+        "NumPy, Pandas, Matplotlib, Seaborn, SQLite, MongoDB",
     },
   ];
 
