@@ -2,8 +2,8 @@
 
 A cutting-edge, production-ready portfolio website that redefines personal branding for developers and tech professionals. Built with modern web technologies and designed with meticulous attention to detail.
 
-🌐 **Live Link**: https://lovable.dev/projects/9f9aff1a-72b4-4f7f-9a03-bd1afb2eed12
-
+🌐 **Live Link**: [https://lovable.dev/projects/9f9aff1a-72b4-4f7f-9a03-bd1afb2eed12
+](https://shiny-portfolio-glow-up.lovable.app)
 ---
 
 ## 🌟 Features
