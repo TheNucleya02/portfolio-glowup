@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
@@ -71,7 +71,7 @@ export const Hero = () => {
         {/* Social Media Links */}
         <div className="flex gap-6 justify-center mt-12">
           <a
-            href="https://github.com"
+            href="https://github.com/TheNucleya02-"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -80,7 +80,7 @@ export const Hero = () => {
             <Github className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/feed/"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -89,13 +89,13 @@ export const Hero = () => {
             <Linkedin className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://www.instagram.com/_aman_jha/"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
-            aria-label="Twitter"
+            aria-label="Instagram"
           >
-            <Twitter className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+            <Instagram className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
           </a>
         </div>
       </div>
