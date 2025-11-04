@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import profileImg from "@/assets/profile.jpeg";
+import profileImg from "@/assets/profile-new.jpeg";
 
 export const About = () => {
   const skills = [
