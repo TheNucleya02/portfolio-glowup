@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export const Hero = () => {
@@ -65,6 +66,37 @@ export const Hero = () => {
           >
             Get In Touch
           </Button>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="flex gap-6 justify-center mt-12">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            aria-label="GitHub"
+          >
+            <Github className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            aria-label="Twitter"
+          >
+            <Twitter className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+          </a>
         </div>
       </div>
     </section>
