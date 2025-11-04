@@ -71,7 +71,7 @@ export const Hero = () => {
         {/* Social Media Links */}
         <div className="flex gap-6 justify-center mt-12">
           <a
-            href="https://github.com/TheNucleya02-"
+            href="https://github.com/TheNucleya02"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -80,7 +80,7 @@ export const Hero = () => {
             <Github className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
           </a>
           <a
-            href="https://www.linkedin.com/feed/"
+            href="https://www.linkedin.com/in/amanjha02"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
