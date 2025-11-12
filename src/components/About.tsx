@@ -28,21 +28,19 @@ export const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           <div className="order-2 md:order-1 space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              I enjoy building things that move from concept to code to impact
+              From fascination to passion — building intelligent systems that matter
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              I am a Computer Science student with a strong interest in
-              Artificial Intelligence, Machine Learning, and Data Science.
-              Constantly learning, experimenting, and building — I strive to
-              grow into a developer who can make a lasting impact. My journey in
-              tech has been driven by curiosity and a desire to solve complex
-              problems with elegant solutions.
+              Hi, I'm Aman, a 21-year-old Computer Science & Engineering student from the Indian Institute of Information Technology UNA, Himachal Pradesh, currently in my third year. My journey in tech began with a fascination for programming — the idea that with enough logic and creativity, I can make a computer do almost anything.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I believe in writing clean, maintainable code and staying
-              up-to-date with the latest technologies. When I'm not coding, you
-              can find me exploring new frameworks, contributing to open-source
-              projects, or sharing knowledge with the developer community.
+              Over the years, this curiosity has evolved into a strong passion for Artificial Intelligence, Data Science, and Backend Development. I've built several projects that combine intelligent systems with practical applications — including AI agents, a Workout Assistant, and data-driven web applications using FastAPI and Flask.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              My technical toolkit includes Python, C++, SQL, FastAPI, Django, and LangChain. I've refined my programming foundation through the 100 Days of Code course by Angela Yu. Beyond development, I enjoy solving LeetCode problems and exploring Data Structures and Algorithms, which help me strengthen my problem-solving mindset.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              I'm a firm believer that passion and determination can transform ideas into impactful solutions, and I strive to continually learn, build, and grow with every project I undertake.
             </p>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
