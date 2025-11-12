@@ -5,6 +5,10 @@ import { ExternalLink, Github } from "lucide-react";
 import workoutImg from "@/assets/workout.jpg";
 import docImg from "@/assets/doc.jpg";
 import cryptoImg from "@/assets/crypto.jpg";
+import movieImg from "@/assets/movie-recommendation.jpg";
+import emailImg from "@/assets/email-classifier.jpg";
+import coffeeImg from "@/assets/coffee-machine.jpg";
+import houseImg from "@/assets/house-price.jpg";
 
 export const Projects = () => {
   const projects = [
@@ -34,6 +38,42 @@ export const Projects = () => {
       github: "https://github.com/TheNucleya02/crypto_assistant_backend.git",
       demo: "#",
       image: cryptoImg,
+    },
+    {
+      title: "Movie Recommendation System",
+      description:
+        "A simple yet effective content-based movie recommendation system built with Python and Streamlit. It suggests movies similar to a user-selected title based on movie features and similarity scores.",
+      tech: ["Streamlit", "Python", "Pandas"],
+      github: "https://github.com/TheNucleya02/movie-recommendation",
+      demo: "#",
+      image: movieImg,
+    },
+    {
+      title: "Email Classifier",
+      description:
+        "This project differentiates between spam and non-spam emails using machine learning techniques and natural language processing for accurate email classification.",
+      tech: ["Python", "Scikit-learn", "NLTK", "Pandas", "NumPy"],
+      github: "https://github.com/TheNucleya02/Email-Classifier",
+      demo: "#",
+      image: emailImg,
+    },
+    {
+      title: "Coffee Machine Simulator",
+      description:
+        "A full-stack web application that simulates a coffee machine using Python Flask backend with Object-Oriented Programming principles.",
+      tech: ["Python", "Flask", "HTML5", "JavaScript", "Tailwind CSS"],
+      github: "https://github.com/TheNucleya02/Coffee-Machine-Simulator",
+      demo: "https://coffee-machine-simulator.onrender.com/",
+      image: coffeeImg,
+    },
+    {
+      title: "House Price Prediction",
+      description:
+        "House valuation prediction for Boston, Massachusetts in the 1970s using machine learning regression models to analyze property features and market trends.",
+      tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Jupyter Notebook"],
+      github: "https://github.com/TheNucleya02/House-Price-Prediction",
+      demo: "#",
+      image: houseImg,
     },
   ];
 
