@@ -25,24 +25,33 @@ export const About = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          <div className="order-2 md:order-1 space-y-6">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              From fascination to passion — building intelligent systems that matter
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Hi, I'm Aman, a 21-year-old Computer Science & Engineering student from the Indian Institute of Information Technology UNA, Himachal Pradesh, currently in my third year. My journey in tech began with a fascination for programming — the idea that with enough logic and creativity, I can make a computer do almost anything.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Over the years, this curiosity has evolved into a strong passion for Artificial Intelligence, Data Science, and Backend Development. I've built several projects that combine intelligent systems with practical applications — including AI agents, a Workout Assistant, and data-driven web applications using FastAPI and Flask.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              My technical toolkit includes Python, C++, SQL, FastAPI, Django, and LangChain. I've refined my programming foundation through the 100 Days of Code course by Angela Yu. Beyond development, I enjoy solving LeetCode problems and exploring Data Structures and Algorithms, which help me strengthen my problem-solving mindset.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              I'm a firm believer that passion and determination can transform ideas into impactful solutions, and I strive to continually learn, build, and grow with every project I undertake.
-            </p>
-            <div className="flex flex-wrap gap-2">
+        <div className="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+          <div className="order-2 md:order-1 space-y-8">
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
+                From fascination to passion — building intelligent systems that matter
+              </h3>
+              <p className="text-lg text-foreground/90 leading-relaxed">
+                Hi, I'm Aman, a 21-year-old Computer Science & Engineering student from the <span className="font-semibold text-foreground">Indian Institute of Information Technology UNA</span>, Himachal Pradesh, currently in my third year.
+              </p>
+            </div>
+
+            <div className="space-y-5">
+              <p className="text-muted-foreground leading-loose text-base">
+                My journey in tech began with a fascination for programming — the idea that with enough logic and creativity, I can make a computer do almost anything.
+              </p>
+              <p className="text-muted-foreground leading-loose text-base">
+                Over the years, this curiosity has evolved into a strong passion for <span className="text-foreground font-medium">Artificial Intelligence</span>, <span className="text-foreground font-medium">Data Science</span>, and <span className="text-foreground font-medium">Backend Development</span>. I've built several projects that combine intelligent systems with practical applications — including AI agents, a Workout Assistant, and data-driven web applications using FastAPI and Flask.
+              </p>
+              <p className="text-muted-foreground leading-loose text-base">
+                My technical toolkit includes Python, C++, SQL, FastAPI, Django, and LangChain. I've refined my programming foundation through the 100 Days of Code course by Angela Yu. Beyond development, I enjoy solving LeetCode problems and exploring Data Structures and Algorithms, which help me strengthen my problem-solving mindset.
+              </p>
+              <p className="text-muted-foreground leading-loose text-base italic border-l-4 border-primary/30 pl-4 py-2">
+                I'm a firm believer that passion and determination can transform ideas into impactful solutions, and I strive to continually learn, build, and grow with every project I undertake.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2 pt-4">
               {skills.map((skill) => (
                 <Badge
                   key={skill}
