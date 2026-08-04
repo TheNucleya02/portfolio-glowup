@@ -2,77 +2,68 @@ import { ExternalLink, Github } from "lucide-react";
 import workoutImg from "@/assets/workout.jpg";
 import docImg from "@/assets/doc.jpg";
 import cryptoImg from "@/assets/crypto.jpg";
-import movieImg from "@/assets/movie-recommendation.jpg";
-import emailImg from "@/assets/email-classifier.jpg";
-import coffeeImg from "@/assets/coffee-machine.jpg";
-import houseImg from "@/assets/house-price.jpg";
+import complaintImg from "@/assets/complaint-system.jpg";
+import seekShopImg from "@/assets/seek-shop.jpg";
+import drinkImg from "@/assets/drink-discover.jpg";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "AI Workout Application",
+      title: "AI-Powered Fitness App",
       description:
-        "Designed an AI-powered fitness app to generate personalized workout and nutrition plans. Integrated FastAPI for a scalable backend and connected it to a structured database.",
-      tech: ["LangGraph", "FastAPI", "SQLite", "Docker"],
+        "AI-driven coaching platform generating personalized workout and nutrition plans via LangGraph-orchestrated Gemini agents, with JWT auth and Celery async processing.",
+      tech: ["LangGraph", "Gemini", "Celery"],
       github: "https://github.com/TheNucleya02/AI-Workout-application.git",
       demo: "#",
       image: workoutImg,
     },
     {
-      title: "Document Intelligence System",
+      title: "Complaint Mgmt System",
       description:
-        "Developed a document parsing and Q&A system capable of handling PDFs and text files. Implemented RAG (Retrieval-Augmented Generation) pipelines for precise query answering.",
-      tech: ["Streamlit", "FastAPI", "Python", "ChromaDB"],
+        "Automated student-complaint triage system using DistilBERT and TF-IDF to classify categories and detect urgency in real time.",
+      tech: ["DistilBERT", "NLP", "Python"],
+      github: "https://github.com/TheNucleya02",
+      demo: "#",
+      image: complaintImg,
+    },
+    {
+      title: "Seek Shop",
+      description:
+        "Concierge-style e-commerce chatbot using RAG over a FAISS vector store to deliver semantic product recommendations from the Flipkart dataset.",
+      tech: ["RAG", "FAISS", "Gemini"],
+      github: "https://github.com/TheNucleya02",
+      demo: "#",
+      image: seekShopImg,
+    },
+    {
+      title: "DocIntel",
+      description:
+        "Production-grade RAG document system turning PDFs into a conversational streaming knowledge base with multi-LLM fallback (Mistral/Gemini).",
+      tech: ["RAG", "Mistral", "LLM Fallback"],
       github: "https://github.com/TheNucleya02/Document-intelligence-system.git",
       demo: "#",
       image: docImg,
     },
     {
-      title: "AI Chat Assistant",
+      title: "Momentum Crypto Suite",
       description:
-        "Built an AI assistant for cryptocurrency insights and analysis. Integrated real-time market data APIs to track and forecast crypto trends and enabled natural language querying.",
-      tech: ["Python", "CrewAI", "FastAPI", "CoinDX API"],
+        "AI-powered crypto tracker using a CrewAI multi-agent system to generate real-time market summaries, news analysis, and sentiment indicators.",
+      tech: ["CrewAI", "Sentiment AI", "Agents"],
       github: "https://github.com/TheNucleya02/crypto_assistant_backend.git",
       demo: "#",
       image: cryptoImg,
     },
     {
-      title: "Movie Recommendation System",
+      title: "Drink Discover",
       description:
-        "A simple yet effective content-based movie recommendation system built with Python and Streamlit. It suggests movies similar to a user-selected title based on movie features and similarity scores.",
-      tech: ["Streamlit", "Python", "Pandas"],
-      github: "https://github.com/TheNucleya02/movie-recommendation",
+        "Django cocktail discovery app with a hybrid data architecture merging live API results with local favorites, backed by a full CI/CD Docker pipeline.",
+      tech: ["Django", "Docker", "CI/CD"],
+      github: "https://github.com/TheNucleya02",
       demo: "#",
-      image: movieImg,
-    },
-    {
-      title: "Email Classifier",
-      description:
-        "This project differentiates between spam and non-spam emails using machine learning techniques and natural language processing for accurate email classification.",
-      tech: ["Python", "Scikit-learn", "NLTK", "Pandas", "NumPy"],
-      github: "https://github.com/TheNucleya02/Email-Classifier",
-      demo: "#",
-      image: emailImg,
-    },
-    {
-      title: "Coffee Machine Simulator",
-      description:
-        "A full-stack web application that simulates a coffee machine using Python Flask backend with Object-Oriented Programming principles.",
-      tech: ["Python", "Flask", "HTML5", "JavaScript", "Tailwind CSS"],
-      github: "https://github.com/TheNucleya02/Coffee-Machine-Simulator",
-      demo: "https://coffee-machine-simulator.onrender.com/",
-      image: coffeeImg,
-    },
-    {
-      title: "House Price Prediction",
-      description:
-        "House valuation prediction for Boston, Massachusetts in the 1970s using machine learning regression models to analyze property features and market trends.",
-      tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Jupyter Notebook"],
-      github: "https://github.com/TheNucleya02/House-Price-Prediction",
-      demo: "#",
-      image: houseImg,
+      image: drinkImg,
     },
   ];
+
 
   return (
     <section id="projects" className="py-24">
