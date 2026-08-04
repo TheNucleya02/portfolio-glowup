@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+
 
 export const Certifications = () => {
   const certifications = [
@@ -25,7 +25,7 @@ export const Certifications = () => {
     <section id="certifications" className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-4 text-foreground">
             Certifications
           </h2>
           <p className="text-muted-foreground text-lg">
@@ -33,24 +33,25 @@ export const Certifications = () => {
           </p>
         </div>
 
-        <div className="grid gap-4 max-w-4xl mx-auto">
+        <div className="grid gap-6 max-w-4xl mx-auto">
           {certifications.map((cert, index) => (
-            <Card
+            <a
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-border/50 hover:border-primary/50 hover:bg-secondary/50"
-              onClick={() => window.open(cert.url, "_blank")}
+              href={cert.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between rounded-3xl bg-background p-6 nm-extruded nm-extruded-hover transition-all duration-300 hover:-translate-y-1"
             >
-              <CardContent className="flex items-center justify-between p-6">
-                <p className="text-foreground font-medium flex-1">
-                  {cert.title}
-                </p>
-                <ExternalLink
-                  size={20}
-                  className="text-muted-foreground group-hover:text-primary transition-colors ml-4"
-                />
-              </CardContent>
-            </Card>
+              <p className="text-foreground font-medium flex-1">
+                {cert.title}
+              </p>
+              <ExternalLink
+                size={20}
+                className="text-muted-foreground group-hover:text-primary transition-colors ml-4"
+              />
+            </a>
           ))}
+
         </div>
       </div>
     </section>

@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram, Quote, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import profileImg from "@/assets/profile-new.jpeg";
 
 export const Hero = () => {
   const [displayedText, setDisplayedText] = useState("");
-  const fullText = "AI/ML enthusiast and builder of data-driven solutions";
+  const fullText = "Building intelligent systems that matter";
 
   useEffect(() => {
     let index = 0;
@@ -21,82 +21,99 @@ export const Hero = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const socials = [
+    { icon: Github, url: "https://github.com/TheNucleya02", label: "GitHub" },
+    { icon: Linkedin, url: "https://www.linkedin.com/in/amanjha02", label: "LinkedIn" },
+    { icon: Instagram, url: "https://www.instagram.com/_aman_jha/", label: "Instagram" },
+  ];
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10 animate-float" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-glow" style={{ animationDelay: "1s" }} />
-      </div>
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="animate-fade-in-up">
+            <p className="inline-block rounded-full bg-background px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary nm-inset-sm mb-8">
+              Hello, I'm Aman
+            </p>
+            <h1 className="font-display text-5xl md:text-6xl xl:text-7xl font-extrabold leading-[1.05] text-foreground mb-10">
+              Engineering Ideas Into Systems
+            </h1>
 
-      <div className="container mx-auto px-6 text-center animate-fade-in-up">
-        <p className="text-primary font-semibold text-lg mb-4 tracking-wider uppercase">
-          Hello, I'm
-        </p>
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 text-foreground">
-          Aman
-        </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 min-h-[3rem]">
-          {displayedText}
-          <span className="animate-pulse">|</span>
-        </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Button
-            size="lg"
-            onClick={() => scrollToSection("projects")}
-            className="rounded-full px-8 shadow-lg hover:shadow-xl transition-all"
-          >
-            View My Work
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => scrollToSection("contact")}
-            className="rounded-full px-8"
-          >
-            Get In Touch
-          </Button>
-        </div>
+            {/* Quote card */}
+            <div className="rounded-3xl bg-background p-7 nm-extruded max-w-lg mb-10">
+              <Quote className="w-7 h-7 text-primary mb-3" />
+              <p className="font-display text-xl md:text-2xl font-semibold text-foreground leading-snug">
+                Creativity is just connecting things.
+              </p>
+              <div className="flex items-center gap-3 mt-5">
+                <span className="h-px w-10 bg-primary/50" />
+                <span className="text-sm font-medium text-muted-foreground">
+                  Steve Jobs
+                </span>
+              </div>
+            </div>
 
-        {/* Social Media Links */}
-        <div className="flex gap-6 justify-center mt-12">
-          <a
-            href="https://github.com/TheNucleya02"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
-            aria-label="GitHub"
-          >
-            <Github className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/amanjha02"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
-          </a>
-          <a
-            href="https://www.instagram.com/_aman_jha/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group p-3 rounded-full bg-secondary hover:bg-primary transition-all duration-300 hover:scale-110 hover:shadow-lg"
-            aria-label="Instagram"
-          >
-            <Instagram className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
-          </a>
+            <p className="text-xl md:text-2xl font-display font-semibold text-foreground mb-4 min-h-[2.5rem]">
+              {displayedText}
+              <span className="animate-pulse text-primary">|</span>
+            </p>
+            <p className="text-muted-foreground leading-relaxed max-w-xl mb-10">
+              I believe software is more than code—it's the architecture that
+              transforms ideas into reliable systems. My work lives at the
+              intersection of AI, backend engineering, and scalable
+              infrastructure.
+            </p>
+
+            <div className="flex flex-wrap gap-5">
+              <button
+                onClick={() => scrollToSection("projects")}
+                className="inline-flex items-center gap-2 rounded-2xl px-8 py-4 font-semibold nm-primary transition-all duration-300 hover:-translate-y-1 active:translate-y-0.5"
+              >
+                View My Work
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="rounded-2xl bg-background px-8 py-4 font-semibold text-foreground nm-extruded nm-extruded-hover nm-pressable transition-all duration-300 hover:-translate-y-1"
+              >
+                Get in Touch
+              </button>
+            </div>
+
+            <div className="flex gap-4 mt-12">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="h-12 w-12 rounded-2xl bg-background flex items-center justify-center text-muted-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
+                >
+                  <s.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Portrait */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="rounded-[3rem] bg-background p-6 nm-extruded animate-float">
+              <div className="w-64 h-80 md:w-80 md:h-[26rem] rounded-[2.25rem] overflow-hidden nm-inset-deep">
+                <img
+                  src={profileImg}
+                  alt="Portrait of Aman Jha"
+                  className="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

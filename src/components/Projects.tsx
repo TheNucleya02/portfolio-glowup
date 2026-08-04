@@ -1,6 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import workoutImg from "@/assets/workout.jpg";
 import docImg from "@/assets/doc.jpg";
@@ -81,66 +78,71 @@ export const Projects = () => {
     <section id="projects" className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            My Projects
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-4 text-foreground">
+            Portfolio Showcase
           </h2>
           <p className="text-muted-foreground text-lg">
-            Some of my recent work
+            Diverse systems engineered for intelligence, scalability, and
+            performance.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/50 overflow-hidden"
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="group rounded-[2rem] bg-background p-5 nm-extruded nm-extruded-hover transition-all duration-300 hover:-translate-y-2 flex flex-col"
             >
-              <div className="relative h-48 overflow-hidden bg-secondary">
+              <div className="relative h-44 rounded-3xl overflow-hidden nm-inset-deep">
                 <img
                   src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  alt={`${project.title} preview`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <CardHeader>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                  {project.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="flex gap-3 pt-2">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex-1"
-                    onClick={() => window.open(project.github, "_blank")}
+
+              <h3 className="font-display text-xl font-bold text-foreground mt-6 mb-3 group-hover:text-primary transition-colors">
+                {project.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mt-5">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-lg bg-background px-3 py-1.5 text-xs text-muted-foreground nm-inset-sm"
                   >
-                    <Github size={16} className="mr-2" />
-                    GitHub
-                  </Button>
-                  {project.demo !== "#" && (
-                    <Button
-                      size="sm"
-                      className="flex-1"
-                      onClick={() => window.open(project.demo, "_blank")}
-                    >
-                      <ExternalLink size={16} className="mr-2" />
-                      Demo
-                    </Button>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex gap-3 pt-6">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-4 py-3 text-sm font-medium text-foreground nm-extruded-sm nm-pressable hover:text-primary transition-colors"
+                >
+                  <Github size={16} />
+                  GitHub
+                </a>
+                {project.demo !== "#" && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold nm-primary transition-all"
+                  >
+                    <ExternalLink size={16} />
+                    Demo
+                  </a>
+                )}
+              </div>
+            </article>
           ))}
         </div>
       </div>

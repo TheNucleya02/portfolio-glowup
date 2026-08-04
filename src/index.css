@@ -2,85 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Design system — Soft UI / Neumorphism. All colors MUST be HSL. */
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 240 10% 15%;
+    --background: 215 24% 90%;
+    --foreground: 210 15% 28%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
+    --card: 215 24% 90%;
+    --card-foreground: 210 15% 28%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    --popover: 215 24% 92%;
+    --popover-foreground: 210 15% 28%;
 
-    --primary: 244 55% 58%;
+    --primary: 244 100% 69%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 10% 15%;
+    --secondary: 215 24% 88%;
+    --secondary-foreground: 210 15% 28%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 4% 46%;
+    --muted: 215 20% 87%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 244 55% 58%;
+    --accent: 246 100% 76%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 244 55% 58%;
+    --border: 215 20% 85%;
+    --input: 215 20% 85%;
+    --ring: 244 100% 69%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom gradient colors */
-    --gradient-from: 244 55% 58%;
-    --gradient-to: 266 60% 65%;
-    
-    /* Shadow colors */
-    --shadow-color: 244 55% 58%;
+    /* Neumorphic shadow colors */
+    --shadow-light: 0 0% 100%;
+    --shadow-dark: 217 24% 71%;
+    --shadow-light-opacity: 0.65;
+    --shadow-dark-opacity: 0.6;
+
+    --gradient-from: 244 100% 69%;
+    --gradient-to: 266 100% 76%;
   }
 
   .dark {
-    --background: 240 10% 8%;
-    --foreground: 0 0% 95%;
+    --background: 220 14% 15%;
+    --foreground: 210 20% 92%;
 
-    --card: 240 10% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 220 14% 15%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 240 10% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 220 14% 17%;
+    --popover-foreground: 210 20% 92%;
 
-    --primary: 244 55% 58%;
+    --primary: 244 100% 72%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 4% 16%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 220 14% 18%;
+    --secondary-foreground: 210 20% 92%;
 
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 220 12% 20%;
+    --muted-foreground: 220 9% 65%;
 
-    --accent: 244 55% 58%;
+    --accent: 246 100% 78%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 244 55% 58%;
+    --border: 220 12% 22%;
+    --input: 220 12% 22%;
+    --ring: 244 100% 72%;
 
-    /* Custom gradient colors */
-    --gradient-from: 244 55% 58%;
-    --gradient-to: 266 60% 65%;
-    
-    /* Shadow colors */
-    --shadow-color: 244 55% 58%;
+    --shadow-light: 220 14% 22%;
+    --shadow-dark: 220 20% 6%;
+    --shadow-light-opacity: 0.7;
+    --shadow-dark-opacity: 0.7;
+
+    --gradient-from: 244 100% 72%;
+    --gradient-to: 266 100% 78%;
   }
 }
 
@@ -91,5 +92,82 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .nm-extruded {
+    box-shadow:
+      9px 9px 16px hsl(var(--shadow-dark) / var(--shadow-dark-opacity)),
+      -9px -9px 16px hsl(var(--shadow-light) / var(--shadow-light-opacity));
+  }
+
+  .nm-extruded-sm {
+    box-shadow:
+      5px 5px 10px hsl(var(--shadow-dark) / var(--shadow-dark-opacity)),
+      -5px -5px 10px hsl(var(--shadow-light) / var(--shadow-light-opacity));
+  }
+
+  .nm-extruded-hover {
+    transition: box-shadow 300ms ease, transform 300ms ease;
+  }
+
+  .nm-extruded-hover:hover {
+    box-shadow:
+      12px 12px 22px hsl(var(--shadow-dark) / 0.75),
+      -12px -12px 22px hsl(var(--shadow-light) / 0.7);
+  }
+
+  .nm-inset {
+    box-shadow:
+      inset 6px 6px 10px hsl(var(--shadow-dark) / var(--shadow-dark-opacity)),
+      inset -6px -6px 10px hsl(var(--shadow-light) / var(--shadow-light-opacity));
+  }
+
+  .nm-inset-sm {
+    box-shadow:
+      inset 3px 3px 6px hsl(var(--shadow-dark) / var(--shadow-dark-opacity)),
+      inset -3px -3px 6px hsl(var(--shadow-light) / var(--shadow-light-opacity));
+  }
+
+  .nm-inset-deep {
+    box-shadow:
+      inset 10px 10px 20px hsl(var(--shadow-dark) / 0.75),
+      inset -10px -10px 20px hsl(var(--shadow-light) / 0.7);
+  }
+
+  .nm-pressable:active {
+    box-shadow:
+      inset 4px 4px 8px hsl(var(--shadow-dark) / 0.7),
+      inset -4px -4px 8px hsl(var(--shadow-light) / 0.6);
+  }
+
+  .nm-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    box-shadow:
+      6px 6px 14px hsl(var(--primary) / 0.35),
+      -6px -6px 14px hsl(var(--shadow-light) / 0.35);
+  }
+
+  .nm-primary:hover {
+    box-shadow:
+      8px 8px 20px hsl(var(--primary) / 0.45),
+      -8px -8px 20px hsl(var(--shadow-light) / 0.4);
+  }
+
+  .nm-primary:active {
+    box-shadow:
+      inset 4px 4px 8px hsl(0 0% 0% / 0.2),
+      inset -4px -4px 8px hsl(0 0% 100% / 0.15);
   }
 }
