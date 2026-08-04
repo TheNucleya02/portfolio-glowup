@@ -1,9 +1,5 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, ArrowRight, Download } from "lucide-react";
 import { toast } from "sonner";
 
 export const Contact = () => {
@@ -13,7 +9,6 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     setTimeout(() => {
       toast.success("Message sent successfully! I'll get back to you soon.");
       setIsSubmitting(false);
@@ -22,87 +17,82 @@ export const Contact = () => {
   };
 
   const socialLinks = [
-    {
-      icon: Github,
-      url: "https://github.com/TheNucleya02",
-      label: "GitHub",
-    },
+    { icon: Github, url: "https://github.com/TheNucleya02", label: "GitHub" },
     {
       icon: Linkedin,
       url: "https://www.linkedin.com/in/aman-jha-523973280/",
       label: "LinkedIn",
     },
-    {
-      icon: Twitter,
-      url: "#",
-      label: "Twitter",
-    },
-    {
-      icon: Mail,
-      url: "mailto:kr.amanjha02@gmail.com",
-      label: "Email",
-    },
+    { icon: Twitter, url: "#", label: "Twitter" },
+    { icon: Mail, url: "mailto:kr.amanjha02@gmail.com", label: "Email" },
   ];
 
+  const fieldClass =
+    "w-full rounded-2xl bg-background px-6 py-4 text-foreground placeholder:text-muted-foreground/70 nm-inset outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background transition-all";
+
   return (
-    <section id="contact" className="py-24 bg-secondary/30">
+    <section id="contact" className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Get In Touch
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-4 text-foreground">
+            Let's Build Something Intelligent
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Let's work together on your next project
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Have a project involving complex data or needing a robust technical
+            foundation? I'm currently accepting new collaborations.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-[2rem] bg-background p-8 nm-extruded space-y-6"
+          >
             <div className="space-y-2">
-              <Label htmlFor="name">Name</Label>
-              <Input
-                id="name"
-                name="name"
-                required
-                placeholder="Your name"
-                className="bg-background"
-              />
+              <label htmlFor="name" className="text-sm font-medium text-muted-foreground">
+                Name
+              </label>
+              <input id="name" name="name" required placeholder="Your name" className={fieldClass} />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
+              <label htmlFor="email" className="text-sm font-medium text-muted-foreground">
+                Email
+              </label>
+              <input
                 id="email"
                 name="email"
                 type="email"
                 required
                 placeholder="your.email@example.com"
-                className="bg-background"
+                className={fieldClass}
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="message">Message</Label>
-              <Textarea
+              <label htmlFor="message" className="text-sm font-medium text-muted-foreground">
+                Message
+              </label>
+              <textarea
                 id="message"
                 name="message"
                 required
+                rows={5}
                 placeholder="Your message..."
-                rows={6}
-                className="bg-background resize-none"
+                className={`${fieldClass} resize-none`}
               />
             </div>
-            <Button
+            <button
               type="submit"
-              size="lg"
-              className="w-full"
               disabled={isSubmitting}
+              className="w-full inline-flex items-center justify-center gap-3 rounded-2xl px-8 py-4 font-bold nm-primary transition-all duration-300 hover:-translate-y-1 active:translate-y-0.5 disabled:opacity-70"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
-            </Button>
+              {!isSubmitting && <ArrowRight className="w-4 h-4" />}
+            </button>
           </form>
 
-          <div className="flex flex-col justify-center space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
+          <div className="flex flex-col gap-8">
+            <div className="rounded-[2rem] bg-background p-8 nm-extruded">
+              <h3 className="font-display text-2xl font-bold mb-4 text-foreground">
                 Connect with me
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -112,38 +102,36 @@ export const Contact = () => {
               </p>
               <div className="flex gap-4">
                 {socialLinks.map((link) => (
-                  <Button
+                  <a
                     key={link.label}
-                    variant="outline"
-                    size="icon"
-                    className="hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-                    onClick={() => window.open(link.url, "_blank")}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                    className="h-12 w-12 rounded-2xl bg-background flex items-center justify-center text-muted-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
                   >
                     <link.icon size={20} />
-                  </Button>
+                  </a>
                 ))}
               </div>
             </div>
 
-            <div className="bg-card p-6 rounded-lg border border-border">
-              <h3 className="text-xl font-bold mb-3 text-foreground">
+            <div className="rounded-[2rem] bg-background p-8 nm-inset">
+              <h3 className="font-display text-xl font-bold mb-3 text-foreground">
                 Download Resume
               </h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-6">
                 Get my complete professional profile and experience details.
               </p>
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/1ateLAOpS6ZmS-W-G0qHSqQJ8bI7L0op9/view?usp=drive_link",
-                    "_blank"
-                  )
-                }
+              <a
+                href="https://drive.google.com/file/d/1ateLAOpS6ZmS-W-G0qHSqQJ8bI7L0op9/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-6 py-4 font-semibold text-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
               >
+                <Download size={18} />
                 Download Resume
-              </Button>
+              </a>
             </div>
           </div>
         </div>
