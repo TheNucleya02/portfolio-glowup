@@ -45,18 +45,24 @@ export const Hero = () => {
               Engineering Ideas Into Systems
             </h1>
 
-            {/* Quote card */}
-            <div className="rounded-3xl bg-background p-7 nm-extruded max-w-lg mb-10">
-              <Quote className="w-7 h-7 text-primary mb-3" />
-              <p className="font-display text-xl md:text-2xl font-semibold text-foreground leading-snug">
-                Creativity is just connecting things.
-              </p>
-              <div className="flex items-center gap-3 mt-5">
-                <span className="h-px w-10 bg-primary/50" />
-                <span className="text-sm font-medium text-muted-foreground">
-                  Steve Jobs
-                </span>
+            {/* Refined quote */}
+            <div className="max-w-lg mb-10">
+              <div className="quote-line" />
+              <div className="py-7 flex items-start gap-4">
+                <Quote className="w-6 h-6 shrink-0 text-primary/70 mt-1" />
+                <div>
+                  <p className="font-display text-2xl md:text-3xl font-semibold italic text-foreground leading-snug">
+                    “Creativity is just connecting things.”
+                  </p>
+                  <div className="flex items-center gap-3 mt-4">
+                    <span className="h-px w-8 bg-primary/50" />
+                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                      Steve Jobs
+                    </span>
+                  </div>
+                </div>
               </div>
+              <div className="quote-line" />
             </div>
 
             <p className="text-xl md:text-2xl font-display font-semibold text-foreground mb-4 min-h-[2.5rem]">
