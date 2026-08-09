@@ -170,4 +170,15 @@
       inset 4px 4px 8px hsl(0 0% 0% / 0.2),
       inset -4px -4px 8px hsl(0 0% 100% / 0.15);
   }
+
+  .quote-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      hsl(var(--shadow-dark) / var(--shadow-dark-opacity)),
+      transparent
+    );
+  }
 }
