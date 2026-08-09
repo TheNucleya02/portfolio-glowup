@@ -1,4 +1,6 @@
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 export const About = () => {
   const skills = [
@@ -71,6 +73,15 @@ export const About = () => {
               ideas into impactful solutions, and I strive to continually learn,
               build, and grow with every project I undertake.
             </p>
+          </div>
+
+          <div className="pt-8">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 rounded-2xl bg-background px-6 py-3 text-sm font-semibold text-primary nm-extruded-sm nm-extruded-hover transition-all"
+            >
+              Read More <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
 
           <div className="flex flex-wrap gap-3 pt-10">
