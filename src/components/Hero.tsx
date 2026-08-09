@@ -38,12 +38,10 @@ export const Hero = () => {
       <div className="container mx-auto px-6 md:px-16 lg:px-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up">
-            <p className="inline-block rounded-full bg-background px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary nm-inset-sm mb-8">
+            <p className="inline-block rounded-full bg-background px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary nm-inset-sm mb-10">
               Hello, I'm Aman
             </p>
-            <h1 className="font-display text-5xl md:text-6xl xl:text-7xl font-extrabold leading-[1.05] text-foreground mb-10">
-              Engineering Ideas Into Systems
-            </h1>
+
 
             {/* Refined quote */}
             <div className="max-w-lg mb-10">
