@@ -35,7 +35,7 @@ export const Hero = () => {
       id="home"
       className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 md:px-16 lg:px-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up">
             <p className="inline-block rounded-full bg-background px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary nm-inset-sm mb-8">
