@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <section id="about" className="py-24">
       <div className="container mx-auto px-4">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start max-w-5xl mx-auto">
           {/* Left: Philosophy */}
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-10 text-foreground">
