@@ -7,6 +7,14 @@ export const Certifications = () => {
       title: "Beginning C++ Programming - From Beginner to Beyond",
       url: "https://www.udemy.com/certificate/UC-fd4bd272-459f-4bc7-9ff7-64ccb7336af2/",
     },
+    {
+      title: "DSA By Abdul Bari",
+      url: "https://www.udemy.com/certificate/UC-126fc37e-db41-46c5-87bd-0bb2b2bbce61/",
+    },
+    {
+      title: "AWS Technical Essentials Certificate - AWS",
+      url: "",
+    },
   ];
 
   return (
