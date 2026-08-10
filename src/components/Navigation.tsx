@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export const Navigation = () => {
@@ -30,7 +30,7 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-4xl">
         <div className="flex items-center justify-between rounded-3xl bg-background/90 backdrop-blur-md px-5 py-3 nm-extruded">
           <button
             onClick={() => scrollToSection("home")}
