@@ -30,23 +30,34 @@ export const Certifications = () => {
         </div>
 
         <div className="grid gap-6 max-w-4xl mx-auto">
-          {certifications.map((cert, index) => (
-            <a
-              key={index}
-              href={cert.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between rounded-3xl bg-background p-6 nm-extruded nm-extruded-hover transition-all duration-300 hover:-translate-y-1"
-            >
-              <p className="text-foreground font-medium flex-1">
-                {cert.title}
-              </p>
-              <ExternalLink
-                size={20}
-                className="text-muted-foreground group-hover:text-primary transition-colors ml-4"
-              />
-            </a>
-          ))}
+          {certifications.map((cert, index) =>
+            cert.url ? (
+              <a
+                key={index}
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between rounded-3xl bg-background p-6 nm-extruded nm-extruded-hover transition-all duration-300 hover:-translate-y-1"
+              >
+                <p className="text-foreground font-medium flex-1">
+                  {cert.title}
+                </p>
+                <ExternalLink
+                  size={20}
+                  className="text-muted-foreground group-hover:text-primary transition-colors ml-4"
+                />
+              </a>
+            ) : (
+              <div
+                key={index}
+                className="flex items-center justify-between rounded-3xl bg-background p-6 nm-extruded"
+              >
+                <p className="text-foreground font-medium flex-1">
+                  {cert.title}
+                </p>
+              </div>
+            )
+          )}
 
         </div>
       </div>
