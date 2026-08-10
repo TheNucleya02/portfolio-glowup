@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { useTheme } from "next-themes";
 
 export const Navigation = () => {
-  const { theme, setTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -57,14 +55,6 @@ export const Navigation = () => {
 
           {/* Mobile controls */}
           <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="relative h-11 w-11 rounded-2xl bg-background nm-extruded-sm nm-pressable flex items-center justify-center"
-              aria-label="Toggle theme"
-            >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="h-11 w-11 rounded-2xl bg-background nm-extruded-sm nm-pressable flex items-center justify-center"
