@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Github, Linkedin, Mail, Twitter, ArrowRight, Download, Code2 } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
-import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -115,44 +114,6 @@ export const Contact = () => {
                   </a>
                 ))}
               </div>
-            </div>
-
-            <div className="rounded-[2rem] bg-background p-8 nm-inset">
-              <h3 className="font-display text-xl font-bold mb-3 text-foreground">
-                Coding Profiles
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                View my solutions, ratings, and activity across LeetCode,
-                Codeforces, GeeksforGeeks, and more.
-              </p>
-              <a
-                href="https://codolio.com/profile/TheNucleya"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-6 py-4 font-semibold text-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
-              >
-                <Code2 size={18} />
-                View on Codolio
-              </a>
-            </div>
-
-            <div className="rounded-[2rem] bg-background p-8 nm-inset">
-              <h3 className="font-display text-xl font-bold mb-3 text-foreground">
-                Download Resume
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Get my complete professional profile and experience details.
-              </p>
-              <a
-                href={resumeAsset.url}
-                download="Aman-Jha-Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-6 py-4 font-semibold text-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
-              >
-                <Download size={18} />
-                Download Resume
-              </a>
             </div>
           </div>
         </div>
