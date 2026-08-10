@@ -15,6 +15,14 @@ export const Certifications = () => {
       title: "AWS Technical Essentials Certificate - AWS",
       url: "",
     },
+    {
+      title: "GenAI Foundation - AWS",
+      url: "",
+    },
+    {
+      title: "Agentic AI Certified Foundations Associate - Oracle",
+      url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=3D6E9582B4BEA56A2E1AECDF6C37274CED1454597E942562DDC033D07E9D5DA8",
+    },
   ];
 
   return (
