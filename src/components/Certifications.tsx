@@ -4,20 +4,8 @@ import { ExternalLink } from "lucide-react";
 export const Certifications = () => {
   const certifications = [
     {
-      title: "Google Cloud Public Profile",
-      url: "https://www.cloudskillsboost.google/public_profiles/d4bd12d2-80fb-43a7-ba30-536890e3e09f",
-    },
-    {
-      title: "Advanced Python: Working with Data [LinkedIn Learning]",
-      url: "https://www.linkedin.com/learning/certificates/cbaafd2959fdd9c1f7582a234173da86cd0bfed1cf7f05d66c4ffa2c9b6773f7",
-    },
-    {
-      title: "DevOps with AWS [LinkedIn Learning]",
-      url: "https://www.linkedin.com/learning/certificates/0a554bf6692410db2e6064d5fe1cdf41ad584cef0705577cd3842005ddbab24c",
-    },
-    {
-      title: "Career Essentials in Generative AI [Microsoft & LinkedIn]",
-      url: "https://www.linkedin.com/learning/certificates/cbaafd2959fdd9c1f7582a234173da86cd0bfed1cf7f05d66c4ffa2c9b6773f7",
+      title: "Beginning C++ Programming - From Beginner to Beyond",
+      url: "https://www.udemy.com/certificate/UC-fd4bd272-459f-4bc7-9ff7-64ccb7336af2/",
     },
   ];
 
