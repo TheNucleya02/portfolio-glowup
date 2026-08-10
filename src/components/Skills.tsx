@@ -37,12 +37,13 @@ export const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24">
-      <div className="container mx-auto px-6">
-        <h3 className="font-display text-2xl font-bold text-foreground">
+    <div id="skills" className="scroll-mt-28">
+      <div>
+        <h3 className="font-display text-3xl md:text-4xl font-extrabold text-foreground">
           Technical Expertise
         </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 mt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
+
           {skills.map((skill) => {
             const Icon = skill.icon;
             return (
@@ -61,6 +62,6 @@ export const Skills = () => {
           })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
