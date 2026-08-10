@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Github, Linkedin, Mail, Twitter, ArrowRight, Download } from "lucide-react";
 import { toast } from "sonner";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -124,7 +125,8 @@ export const Contact = () => {
                 Get my complete professional profile and experience details.
               </p>
               <a
-                href="https://drive.google.com/file/d/1ateLAOpS6ZmS-W-G0qHSqQJ8bI7L0op9/view?usp=drive_link"
+                href={resumeAsset.url}
+                download="Aman-Jha-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-6 py-4 font-semibold text-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
