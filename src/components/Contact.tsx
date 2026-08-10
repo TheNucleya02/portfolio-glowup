@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Github, Linkedin, Mail, Twitter, ArrowRight, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, ArrowRight, Download, Code2 } from "lucide-react";
 import { toast } from "sonner";
 import resumeAsset from "@/assets/resume.pdf.asset.json";
 
