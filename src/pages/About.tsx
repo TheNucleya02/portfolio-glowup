@@ -31,7 +31,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
-      <header className="sticky top-0 z-50 backdrop-blur-md">
+      <header className="relative z-50">
         <div className="container mx-auto flex items-center justify-between px-6 py-5 md:px-16">
           <Link
             to="/"
