@@ -46,16 +46,26 @@ export const ProfilesResume = () => {
               Get a copy of my complete professional profile and experience
               details.
             </p>
-            <a
-              href={resumeAsset.url}
-              download="Aman-Jha-Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-6 py-4 font-semibold text-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
-            >
-              <Download size={18} />
-              Download Resume
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href={resumeAsset.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-6 py-4 font-semibold text-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
+              >
+                <ExternalLink size={18} />
+                Preview
+              </a>
+              <a
+                href={resumeAsset.url}
+                download="Aman-Jha-Resume.pdf"
+                className="flex-1 inline-flex items-center justify-center gap-2 rounded-2xl bg-background px-6 py-4 font-semibold text-foreground nm-extruded-sm nm-extruded-hover nm-pressable hover:text-primary transition-all"
+              >
+                <Download size={18} />
+                Download
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
