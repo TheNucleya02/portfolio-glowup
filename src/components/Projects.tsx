@@ -13,7 +13,7 @@ export const Projects = () => {
       description:
         "AI-driven coaching platform generating personalized workout and nutrition plans via LangGraph-orchestrated Gemini agents, with JWT auth and Celery async processing.",
       tech: ["LangGraph", "Gemini", "Celery"],
-      github: "https://github.com/TheNucleya02/AI-Workout-application.git",
+      github: "https://github.com/TheNucleya02/AI-Workout-API.git",
       demo: "#",
       image: workoutImg,
     },
@@ -22,7 +22,7 @@ export const Projects = () => {
       description:
         "Automated student-complaint triage system using DistilBERT and TF-IDF to classify categories and detect urgency in real time.",
       tech: ["DistilBERT", "NLP", "Python"],
-      github: "https://github.com/TheNucleya02",
+      github: "https://github.com/TheNucleya02/College-complaint-system.git",
       demo: "#",
       image: complaintImg,
     },
@@ -31,7 +31,7 @@ export const Projects = () => {
       description:
         "Concierge-style e-commerce chatbot using RAG over a FAISS vector store to deliver semantic product recommendations from the Flipkart dataset.",
       tech: ["RAG", "FAISS", "Gemini"],
-      github: "https://github.com/TheNucleya02",
+      github: "https://github.com/TheNucleya02/Seek-Shop.git",
       demo: "#",
       image: seekShopImg,
     },
@@ -40,7 +40,7 @@ export const Projects = () => {
       description:
         "Production-grade RAG document system turning PDFs into a conversational streaming knowledge base with multi-LLM fallback (Mistral/Gemini).",
       tech: ["RAG", "Mistral", "LLM Fallback"],
-      github: "https://github.com/TheNucleya02/Document-intelligence-system.git",
+      github: "https://github.com/TheNucleya02/DocIntel.git",
       demo: "#",
       image: docImg,
     },
@@ -49,7 +49,7 @@ export const Projects = () => {
       description:
         "AI-powered crypto tracker using a CrewAI multi-agent system to generate real-time market summaries, news analysis, and sentiment indicators.",
       tech: ["CrewAI", "Sentiment AI", "Agents"],
-      github: "https://github.com/TheNucleya02/crypto_assistant_backend.git",
+      github: "https://github.com/TheNucleya02/Crypto-suite.git",
       demo: "#",
       image: cryptoImg,
     },
@@ -58,7 +58,7 @@ export const Projects = () => {
       description:
         "Django cocktail discovery app with a hybrid data architecture merging live API results with local favorites, backed by a full CI/CD Docker pipeline.",
       tech: ["Django", "Docker", "CI/CD"],
-      github: "https://github.com/TheNucleya02",
+      github: "https://github.com/TheNucleya02/Drink-Discover.git",
       demo: "#",
       image: drinkImg,
     },
